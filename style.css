@@ -1,0 +1,32 @@
+#addEmployee{
+    text-align: center;
+    margin: 30px;
+    padding: 30px;
+    background-color: white;
+}
+
+.fName{
+    margin-right: 40px;
+}
+
+#lName{
+    margin-right: 40px;
+}
+#employeeNumber{
+    margin-right: 40px;
+}
+body{
+    background-color: grey;
+}
+
+h1{
+    text-align: center;
+}
+
+#addButton{
+    margin-top: 40px;
+}
+
+#classEmployee{
+background-color: white;
+}
