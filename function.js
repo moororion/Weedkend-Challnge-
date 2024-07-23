@@ -4,16 +4,18 @@ function addEmployee() {
   const employeeNumber = document.getElementById('employeeNumber').value;
   const takeHomePay = document.getElementById('takeHomePay').value;
 
+  
 
-  const employeeDiv = document.createElement('div');
-  employeeDiv.classList.add('employee-entry');
-  employeeDiv.innerHTML = `
-    <p>Name: ${firstName} ${lastName}</p>
-    <p>Employee Number: ${employeeNumber}</p>
-    <p>Take Home Pay: $${takeHomePay}</p>
+  const employeeBody = document.getElementById('employeeBody');
+
+  const employeeRow = document.createElement('tr');
+  employeeRow.innerHTML = `
+    <td>${firstName} ${lastName}</td>
+    <td>${employeeNumber}</td>
+    <td>$${takeHomePay}</td>
   `;
 
-  document.getElementById('classEmployee').appendChild(employeeDiv);
+  employeeBody.appendChild(employeeRow);
 
   updateTotalMonthly(Number(takeHomePay));
 
@@ -21,7 +23,7 @@ function addEmployee() {
 }
 
 function clearEmployees() {
-  document.getElementById('classEmployee').innerHTML = '';
+  document.getElementById('employeeBody').innerHTML = '';
   updateTotalMonthly(0);
 }
 

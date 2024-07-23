@@ -25,14 +25,22 @@
         <label for="takeHomePay">Take Home Pay:</label>
         <input type="number" id='takeHomePay' name='takeHomePay'>
 
-        <button type="button" id='addButton'  onclick="addEmployee()"><h3>Add Employee</h3></button>
+        <button type="button" id='addButton' onclick="addEmployee()"><h3>Add Employee</h3></button>
       </form>
     </div>
     <h2 id='employee'>Employees</h2>
-    <button type="button" id='clear' onclick='clearEmployees()'><h3>Clear</h3></button>
-    <div id='classEmployee'>
-
-    </div>
+    <button type="button" id='clear' onclick="clearEmployees()"><h3>Clear</h3></button>
+    <table id='employeeTable'>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Employee Number</th>
+          <th>Take Home Pay</th>
+        </tr>
+      </thead>
+      <tbody id='employeeBody'>
+      </tbody>
+    </table>
   </main>
   <footer>
     <p>Total Monthly: <span id="totalMonthly">0</span></p>
